@@ -11,7 +11,7 @@ pipeline {
                               python --version
                               pip install --upgrade pip --user
                               pip install virtualenv
-                              virtualenv -p "which python" .venv
+                              virtualenv .venv
                               source .venv/bin/activate
                               pip install --user -r requirements.txt
                               python dashboard1.py
