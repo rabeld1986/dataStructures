@@ -5,9 +5,9 @@ pipeline {
         stage('Check enronment') {
             steps {
                 sh script: 'PATH=/Library/Frameworks/Python.framework/Versions/3.6/bin/:$PATH'
-                sh 'pip install --upgrade pip'
+                sh 'pip install --upgrade pip --user'
                 sh 'which pip'
-                sh script: "pip install virtualenv"
+                sh script: "pip install virtualenv --user"
                 sh 'which virtualenv'
             }
         }
