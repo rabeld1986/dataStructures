@@ -6,6 +6,8 @@ pipeline {
             steps{
                 script{
                     withPythonEnv('python'){
+                        sh 'pip install --upgrade pip --user'
+                        sh 'pip install --user -r requirements.txt'
                         sh 'python dashboard1.py' 
                     }
                 }
