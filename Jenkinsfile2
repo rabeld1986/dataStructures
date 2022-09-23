@@ -3,13 +3,13 @@ pipeline {
     agent any
     stages {
         stage('Check enronment') {
-            sh script: 'PATH=/Library/Frameworks/Python.framework/Versions/3.6/bin/:$PATH'
-            sh 'sudo su jenkins'
-            sh 'which pip'
-            sh 'which virtualenv'
+            steps {
+                sh script: 'PATH=/Library/Frameworks/Python.framework/Versions/3.6/bin/:$PATH'
+                sh 'sudo su jenkins'
+                sh 'which pip'
+                sh 'which virtualenv'
             }
         }
-
         stage('build') {
             steps {
                 sh 'virtualenv venv && . venv/bin/activate && pip install -r requirements.txt && python dashboard1.py'
