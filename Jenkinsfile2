@@ -6,9 +6,9 @@ pipeline {
             steps{
                 script{
                     withPythonEnv('python'){
-                        sh 'python dashboard1.py'                             
-                       
-              
+                        sh 'python dashboard1.py' 
+                    }
+                }
             }
         }
     }
