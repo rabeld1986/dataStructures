@@ -4,10 +4,9 @@ pipeline {
     stages {
         stage('evironment') {
             steps {
-                withEnv(["HOME=${env.WORKSPACE}"]) {
                 sh script:'''
                             #/bin/bash
-                              export PATH="$WORKSPACE/.local/bin:$PATH"
+                              export PATH=/usr/local/bin:$PATH
                               python --version
                               pip install --upgrade pip --user
                               pip install virtualenv
@@ -16,7 +15,7 @@ pipeline {
                               pip install --user -r requirements.txt
                               python dashboard1.py
                                 '''
-                }
+              
             }
         }
     }
