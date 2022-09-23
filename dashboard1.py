@@ -2,7 +2,7 @@
 
 import requests
 from os.path import exists
-from Plot_Data import plot_data, save_to_pdf
+#from Plot_Data import plot_data, save_to_pdf
 import jenkins
 from Create_csv_file import create_csv, append_to_csv
 from datetime import datetime
