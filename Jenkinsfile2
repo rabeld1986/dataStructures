@@ -6,7 +6,8 @@ pipeline {
             steps {
                 sh script: 'PATH=/Library/Frameworks/Python.framework/Versions/3.6/bin/:$PATH'
                 sh 'python --version'
-                sh 'sudo apt install python3.5'
+                sh 'apt install python3 -y'
+                sh 'python --version'
                 sh '-m pip install --upgrade pip'
                 sh 'which pip'
                 sh script: "pip install virtualenv"
