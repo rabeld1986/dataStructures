@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import requests
 from os.path import exists
 from Plot_Data import plot_data, save_to_pdf
