@@ -2,19 +2,12 @@
 pipeline {
     agent any
     stages {
-        stage('evironment') {
-            steps {
-                sh script:'''
-                            #/bin/bash
-                              export PATH=/usr/local/bin:$PATH
-                              python --version
-                              pip install --upgrade pip --user
-                              pip install virtualenv
-                              virtualenv .venv
-                              source .venv/bin/activate
-                              pip install --user -r requirements.txt
-                              python dashboard1.py
-                                '''
+        stage('my_stage'){
+            steps{
+                script{
+                    withPythonEnv('python'){
+                        sh 'python dashboard1.py'                             
+                       
               
             }
         }
