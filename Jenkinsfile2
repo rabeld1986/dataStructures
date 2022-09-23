@@ -13,13 +13,9 @@ pipeline {
                               ls
                               pip install --user -r requirements.txt
                               export PATH="$WORKSPACE/.local/bin:$PATH"
+                              python dashboard1.py
                                 '''
                 }
-            }
-        }
-        stage('build') {
-            steps {
-                sh 'python dashboard1.py'
             }
         }
     }
