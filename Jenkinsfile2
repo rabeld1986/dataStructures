@@ -2,7 +2,7 @@
 pipeline {
     agent any
     stages {
-        stage('build') {
+        stage('evironment') {
             steps {
                 withEnv(["HOME=${env.WORKSPACE}"]) {
                 sh script:'''
