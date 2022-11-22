@@ -3,8 +3,8 @@ import csv
 
 def create_csv(data):
 
-    header = ['job_id', 'date_built', 'execution_time']
-    with open(r'C:\Users\rabel\Documents\execution_log1.csv', 'a', encoding='UTF8') as f:
+    header = ['job_id', 'date_built', 'execution_time', 'result', 'cause', 'in_progress']
+    with open(r'C:\Users\rabel\Documents\execution_log1.csv', 'a',newline='', encoding='UTF8') as f:
         writer = csv.writer(f)
 
         writer.writerow(header)
@@ -12,6 +12,6 @@ def create_csv(data):
 
 
 def append_to_csv(data):
-    with open(r'C:\Users\rabel\Documents\execution_log1.csv', 'a', encoding='UTF8') as f:
+    with open(r'C:\Users\rabel\Documents\execution_log1.csv', 'a', newline='', encoding='UTF8') as f:
         writer = csv.writer(f)
         writer.writerow(data)
